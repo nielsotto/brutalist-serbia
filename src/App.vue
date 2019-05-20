@@ -1,29 +1,56 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <nav-bar></nav-bar>
+    <mobile-menu></mobile-menu>
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
     <router-view />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import NavBar from '@/components/NavBar';
+import MobileMenu from '@/components/MobileMenu';
+import FullButton from '@/components/FullButton';
+
+export default {
+  components: {
+    NavBar,
+    MobileMenu,
+    FullButton
+  },
+  data: {
+    menuIsOpen: false
   }
+}
+</script>
+
+
+<style lang="scss">
+@import "./assets/style/type.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  //overflow-x: hidden;
+  background: $primaryLight;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  padding: 0;
+  margin: $navHeight 20px;
 }
 </style>
