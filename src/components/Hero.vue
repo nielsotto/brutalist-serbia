@@ -48,11 +48,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@import '@/assets/style/vars.scss';
+@import "../assets/style/vars.scss";
 
   .hero {
     margin: 0 -20px;
     overflow: hidden;
+    position: relative;
+    height: 100vh;
 
     h1 {
       white-space: nowrap;

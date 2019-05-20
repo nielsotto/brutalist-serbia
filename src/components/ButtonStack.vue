@@ -16,9 +16,10 @@ import FullButton from '@/components/FullButton';
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/vars.scss";
     .buttonStack {
         position: absolute;
-        bottom: 0;
+        bottom: $navHeight;
         width: 100%;
     }
 </style>
