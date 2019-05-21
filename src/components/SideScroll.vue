@@ -70,6 +70,9 @@
                 overflow: hidden;
                 margin-right: 20px;
                 position: relative;
+                &:last-child{
+                    margin-right: 0;
+                }
 
                 img {
                     height: 100%;
