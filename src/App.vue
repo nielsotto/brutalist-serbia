@@ -1,4 +1,5 @@
 <template>
+<div id="mobile-presentation-container">
   <div id="app">
     <nav-bar @toggleMenuIsOpen="toggleMenuIsOpen"></nav-bar>
     <mobile-menu :menuIsOpen="menuIsOpen"></mobile-menu>
@@ -9,6 +10,7 @@
     <router-view />
     <bottom-footer :text="'© Visit Serbia'"></bottom-footer>
   </div>
+</div>
 </template>
 
 <script>
@@ -57,6 +59,11 @@ body, html {
 body {
   //overflow-x: hidden;
   background: $primaryLight;
+}
+
+#mobile-presentation-container {
+  max-height: 375px;
+  max-width: 812px;
 }
 
 a {
