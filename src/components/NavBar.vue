@@ -6,7 +6,7 @@
             </div>
         </router-link>
 
-        <div id="menu-btn" @click="menuIsOpen = !menuIsOpen">
+        <div id="menu-btn" @click="$emit('toggleMenuIsOpen')">
             <!-- <div class="inner"></div> -->
         </div>
         
@@ -34,7 +34,6 @@
 @import "../assets/style/type.scss";
 
 $menuSize: 35px;
-$navMargin: 20px;
     nav {
         height: $navHeight;
         display: flex;

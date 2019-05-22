@@ -1,7 +1,7 @@
 <template>
     <div id="mobile-menu" :class="{ menuOpen: menuIsOpen }">
         <div class="menu-links-wrapper">
-            <router-link v-for="link in links" :key="link.id" :to="link.routeUrl" :class="{menuOpen: menuIsOpen}">
+            <router-link v-for="link in links" :key="link.id" :to="link.routeUrl">
                 <h3>
                     {{ link.headline }}
                 </h3>
@@ -61,29 +61,35 @@
         position: fixed;
         top: 0;
         right: 0;
+        transform: translateX(100%);
         left: auto;
         z-index: 665;
-        width: 0;
         transition: all .5s ease-out;
         padding: 0;
 
         a {
             color: $primaryColor;
-        }
 
-        h3 {
-            margin-top: 2rem;
+            h3 {
+                margin: 2rem 0;
+            }
+
+            &.router-link-exact-active {
+                color: $primaryLight;
+            }
         }
 
         .menu-links-wrapper {
+            position: absolute;
+            left: $navMargin;
+            right: $navMargin;
             bottom: 0;
-            position: fixed;
-            margin-bottom: 2rem;
         }
 
         &.menuOpen {
-            width: 100%;
-            padding: 20px;
+            width: 100vw;
+            padding: $navMargin;
+            transform: translateX(0);
         }
     }
 

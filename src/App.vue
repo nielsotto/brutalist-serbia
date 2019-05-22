@@ -1,29 +1,43 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
-    <mobile-menu></mobile-menu>
+    <nav-bar @toggleMenuIsOpen="toggleMenuIsOpen"></nav-bar>
+    <mobile-menu :menuIsOpen="menuIsOpen"></mobile-menu>
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
     <router-view />
+    <bottom-footer :text="'© Visit Serbia'"></bottom-footer>
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar';
 import MobileMenu from '@/components/MobileMenu';
-import FullButton from '@/components/FullButton';
+import BottomFooter from '@/components/BottomFooter';
 
 export default {
   components: {
     NavBar,
     MobileMenu,
-    FullButton
+    BottomFooter
   },
-  data: {
-    menuIsOpen: false
-  }
+  data() {
+    return {
+      menuIsOpen: false
+    }
+  },
+  methods: {
+    toggleMenuIsOpen() {
+      console.log('her')
+      this.menuIsOpen = !this.menuIsOpen;
+    }
+  },
+  watch: {
+    $route(){
+      this.menuIsOpen = false;
+    }
+  },
 }
 </script>
 
@@ -51,6 +65,11 @@ a {
 
 #app {
   padding: 0;
-  margin: $navHeight 20px;
+  margin: $navHeight 20px 0 20px;
 }
+
+/* footer {
+  height: 90px;
+  background: $primaryColor;
+} */
 </style>

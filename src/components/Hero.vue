@@ -54,7 +54,7 @@ export default {
     margin: 0 -20px;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: calc(100vh - #{$navHeight});
 
     h1 {
       white-space: nowrap;

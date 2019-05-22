@@ -1,7 +1,7 @@
 <template>
     <div class="buttonStack">
-        <full-button :bgColor="'#2BFCDC'" :textColor="'#802CD7'" :text="'Read History'"></full-button>
-        <full-button :bgColor="'#802CD7'" :textColor="'#FEE4DD'" :text="'See Popular Bloks'"></full-button>
+        <full-button :primary="true" :text="'Read History'"></full-button>
+        <full-button :primary="false" :text="'See Popular Bloks'"></full-button>
     </div>
 </template>
 
@@ -19,7 +19,7 @@ import FullButton from '@/components/FullButton';
 @import "../assets/style/vars.scss";
     .buttonStack {
         position: absolute;
-        bottom: $navHeight;
+        bottom: 0;
         width: 100%;
     }
 </style>

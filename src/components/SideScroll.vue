@@ -22,23 +22,23 @@
                         title: 'Evil Looking',
                         // Kopieret fra sidebaren
                         // src/assets/images/buildings/b1.jpg
-                        // src: '../assets/images/buildings/b1.jpg',
+                        src: require('../assets/images/buildings/b1.jpg'),
                         // "../assets/style/vars.scss"
-                        src: 'https://upload.wikimedia.org/wikipedia/commons/a/aa/Jugotours_Beograd_Dec_2003.jpg',
+                        //src: 'https://upload.wikimedia.org/wikipedia/commons/a/aa/Jugotours_Beograd_Dec_2003.jpg',
                         alt: 'A great building'
                     },
                     {
                         id: 2,
                         title: 'Evil Looking',
-                        //src: '../assets/images/buildings/fox.jpg',
-                        src: 'http://2.bp.blogspot.com/-HVds66TUkcY/Uq4lFRANTQI/AAAAAAAAE84/N2_utb5Exxc/s1600/800px-Forum_Krako%CC%81w_10-2003.jpg',
+                        src: require('../assets/images/buildings/b2.jpg'),
+                        //src: 'http://2.bp.blogspot.com/-HVds66TUkcY/Uq4lFRANTQI/AAAAAAAAE84/N2_utb5Exxc/s1600/800px-Forum_Krako%CC%81w_10-2003.jpg',
                         alt: 'A great building'
                     },
                     {
                         id: 3,
                         title: 'Evil Looking',
-                        //src: './assets/images/buildings/b3.jpg',
-                        src: 'http://jrrny.com/wp-content/uploads/journeys/divokoza/ca0b13e3717c4b967c4c33aef4326637.jpg',
+                        src: require('../assets/images/buildings/b3.jpg'),
+                        //src: 'http://jrrny.com/wp-content/uploads/journeys/divokoza/ca0b13e3717c4b967c4c33aef4326637.jpg',
                         alt: 'A great building'
                     },
                 ]
@@ -52,7 +52,7 @@
 
     .sideScroll {
         position: relative;
-        margin-bottom: 72px;
+        margin: 72px 0;
 
         .scrolling-wrapper {
             overflow-x: scroll;
@@ -94,5 +94,7 @@
 
     h4 {
         margin-top: 0;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: .03em $primaryColor;
     }
 </style>
