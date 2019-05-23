@@ -5,9 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brutalist Presentation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+                "Droid Sans", "Helvetica Neue", sans-serif;
+            color: #802BD7;
+            text-align: center;
+            background: #FEE4DC;
+        }
+
+        .text {
+            width: 350px;
+            max-width: 500px;
+        }
+
+        #container {
+            width: 375px;
+            max-width: 375px;
+            height: 812px;
+            max-height: 812px;
+            overflow: hidden;
+            box-shadow: 
+                rgba(46, 18, 77, 0.05) 0px 2px 2px, 
+                rgba(46, 18, 77, 0.05) 0px 4px 4px, 
+                rgba(46, 18, 77, 0.05) 0px 8px 8px, 
+                rgba(46, 18, 77, 0.05) 0px 16px 16px, 
+                rgba(46, 18, 77, 0.05) 0px 32px 32px, 
+                rgba(46, 18, 77, 0.05) 0px 64px 64px;
+        }
+
+        iframe {
+            width: 390px;
+            max-width: 390px;
+            height: 827px;
+            max-height: 827px;
+        }
+    </style>
 </head>
 <body>
-    <iframe src="/index.html" frameborder="0"></iframe>
-    
+    <div id="container">
+        <iframe src="http://93df322e1c0bb978a11633d29ec23ff1065e6f62.web26.temporaryurl.org" frameborder="0"></iframe>
+    </div>
+    <div class="text">
+        <h1>BLOK</h1>
+        <h2>Visit Serbia<br>Brutalist Buidings</h2>
+    </div>
 </body>
 </html>

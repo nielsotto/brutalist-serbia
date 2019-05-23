@@ -5,8 +5,8 @@ import About from "./views/About.vue";
 
 Vue.use(Router);
 
-export default new Router({
-  mode: "history",
+const router =  new Router({
+  mode: "hash",
   base: process.env.BASE_URL,
   routes: [
     {
@@ -30,3 +30,11 @@ export default new Router({
     },
   ]
 });
+
+
+router.beforeEach((to, from, next) => {
+  window.scroll(0, 0);
+  next();
+});
+
+export default router;
