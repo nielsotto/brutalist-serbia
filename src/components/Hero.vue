@@ -24,19 +24,19 @@ export default {
       headlines: [
         {
           id: 1,
-          message: "Welcome Welcome Welcome"
+          message: "Genex Tower Genex Tower Genex Tower"
         },
         {
           id: 2,
-          message: "Serbia Serbia Serbia"
+          message: "SIV 3 SIV 3 SIV 3"
         },
         {
           id: 3,
-          message: "Yas Yas Yas"
+          message: "Sava Centar Sava Centar Sava Centar"
         },
         {
           id: 4,
-          message: "Maybe Maybe Maybe"
+          message: "Hotel Jugoslavija Hotel Jugoslavija Hotel Jugoslavija"
         }
       ]
     }
